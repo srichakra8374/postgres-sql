@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - run: docker build -t myflaskimage
+      - run: docker build -t myflaskimage .
       - run: docker image ls
       - run: docker tag myflaskimage:latest srichakra769/dockerhub:latest
       - run: docker pull srichakra769/dockerhub:latest
