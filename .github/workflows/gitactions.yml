@@ -11,4 +11,5 @@ jobs:
       - run: docker image ls
       - run: docker tag myflaskimage:latest srichakra769/dockerhub:latest
       - run: docker push srichakra769/dockerhub:latest
+      - run: docker run -p 8000:8000 --name myflask_container myflaskimage
 
