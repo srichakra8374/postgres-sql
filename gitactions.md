@@ -20,4 +20,4 @@ jobs:
       - run: docker build -t myflaskimage .
       - run: docker image ls
       - run: docker tag myflaskimage:latest srichakra769/dockerhub:latest
-      - run: docker pull srichakra769/dockerhub:latest
+      - run: docker push srichakra769/dockerhub:latest
