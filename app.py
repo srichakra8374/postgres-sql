@@ -14,9 +14,10 @@ app = Flask(__name__)
 # Initialize MySQL
 ##mysql = MySQL(app)
 conn = psycopg2.connect(database="achievers",
-                        user="flaskdevl",
-                        password="flaskdevl01",
-                        host="dev-achievers-01.cdcue0e6sf3u.us-east-1.rds.amazonaws.com", port="5432")
+user = os.environ.get('DB_USER'),
+password =os.environ.get('DB_USER_PWD'),
+host =os.environ.get("DB_HOST"),
+port="5432")
 
 @app.route('/')
 def hello():
