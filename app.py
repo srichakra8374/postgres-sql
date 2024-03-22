@@ -14,10 +14,10 @@ app = Flask(__name__)
 # Initialize MySQL
 ##mysql = MySQL(app)
 conn = psycopg2.connect(database="achievers",
-user = os.environ.get('DB_USER'),
-password =os.environ.get('DB_USER_PWD'),
-host =os.environ.get("DB_HOST"),
-port="5432")
+                        user=os.environ.get('DB_USER'),
+                        password=os.environ.get('DB_USER_PWD'),
+                        host=os.environ.get("DB_HOST"),
+                        port="5432")
 
 @app.route('/')
 def hello():
@@ -46,5 +46,5 @@ def greeting():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8001, debug=True)
 

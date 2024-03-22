@@ -6,6 +6,11 @@ user = os.environ.get('DB_USER'),
 password =os.environ.get('DB_USER_PWD'),
 host =os.environ.get("DB_HOST"),
 port="5432").
+3. exported changes
+         export DB_USER=flaskdevl
+         export DB_USER_PWD=flaskdevl01
+         export DB_HOST=dev-achievers-01.cdcue0e6sf3u.us-east-1.rds.amazonaws.com
+         
 2. Runned app.py file by using command
      python3 app.py
 3. Made changes in dockerfile to run env variables in dockercontainer.
